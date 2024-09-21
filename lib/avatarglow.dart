@@ -14,7 +14,7 @@ class AvatarGlowPage extends StatelessWidget {
         child: AvatarGlow(
           startDelay: Duration(milliseconds: 1000),
           glowColor: Colors.blue,
-          endRadius: 300.0,
+          endRadius: 200.0,
           duration: Duration(milliseconds: 2000),
           repeat: true,
           child: Material(
@@ -23,7 +23,7 @@ class AvatarGlowPage extends StatelessWidget {
             color: Colors.transparent,
             child: CircleAvatar(
               backgroundImage: AssetImage("assets/images/avtar.png"),
-              radius: 100.0,
+              radius: 75.0,
             ),
           ),
         ),
