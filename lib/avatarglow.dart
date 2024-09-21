@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:avatar_glow/avatar_glow.dart'; // Make sure to add this package in your pubspec.yaml
+import 'package:avatar_glow/avatar_glow.dart';
 
 class AvatarGlowPage extends StatelessWidget {
   const AvatarGlowPage({super.key});
@@ -22,7 +22,7 @@ class AvatarGlowPage extends StatelessWidget {
             shape: CircleBorder(),
             color: Colors.transparent,
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/avtar.png"),
+              backgroundImage: AssetImage("assets/images/avtar.png"),
               radius: 100.0,
             ),
           ),
