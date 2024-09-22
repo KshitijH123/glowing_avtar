@@ -8,7 +8,7 @@ class HeartAvtarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Avatar Glow'),
+        title: const Text('Heart Avatar'),
       ),
       body: const Center(
         child: AvatarGlow(
@@ -22,7 +22,7 @@ class HeartAvtarPage extends StatelessWidget {
             shape: CircleBorder(),
             color: Colors.transparent,
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/images/avtar.png"),
+              backgroundImage: AssetImage("assets/images/heart.png"),
               radius: 75.0,
             ),
           ),

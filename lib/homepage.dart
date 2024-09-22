@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 //   MaterialPageRoute(builder: (context) => ()),
                 // );
               },
-              child: const Text('Go to Avatar Glow'),
+              child: const Text('Go to Heart Avatar'),
             ),
           ],
         ),
