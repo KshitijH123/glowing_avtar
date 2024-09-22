@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glowing_avtar/heart_avtar_page.dart';
 import 'avatarglow.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -34,10 +35,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
               ElevatedButton(
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => ()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HeartAvtarPage()),
+                );
               },
               child: const Text('Go to Heart Avatar'),
             ),

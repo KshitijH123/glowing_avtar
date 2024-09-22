@@ -13,7 +13,7 @@ class HeartAvtarPage extends StatelessWidget {
       body: const Center(
         child: AvatarGlow(
           startDelay: Duration(milliseconds: 1000),
-          glowColor: Colors.blue,
+          glowColor: Colors.red,
           endRadius: 200.0,
           duration: Duration(milliseconds: 2000),
           repeat: true,
@@ -22,7 +22,7 @@ class HeartAvtarPage extends StatelessWidget {
             shape: CircleBorder(),
             color: Colors.transparent,
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/images/heart.png"),
+              backgroundImage: AssetImage("assets/images/heart_2.png"),
               radius: 75.0,
             ),
           ),
