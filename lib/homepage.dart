@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HeartAvtarPage()),
+                  MaterialPageRoute(builder: (context) => const HeartAvtarPage()),
                 );
               },
               child: const Text('Go to Heart Avatar'),
