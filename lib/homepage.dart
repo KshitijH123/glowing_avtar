@@ -27,20 +27,20 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AvatarGlowPage()),
+                  MaterialPageRoute(builder: (context) => const AvatarGlowPage()),
                 );
               },
               child: const Text('Go to Avatar Glow'),
             ),
-            //   ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(builder: (context) => ()),
-            //     );
-            //   },
-            //   child: const Text('Go to Avatar Glow'),
-            // ),
+              ElevatedButton(
+              onPressed: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => ()),
+                // );
+              },
+              child: const Text('Go to Avatar Glow'),
+            ),
           ],
         ),
       ),
