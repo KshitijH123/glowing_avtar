@@ -42,6 +42,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('Go to Heart Avatar'),
             ),
+              ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ()),
+                );
+              },
+              child: const Text('Go to Heart Avatar'),
+            ),
           ],
         ),
       ),
