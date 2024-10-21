@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glowing_avtar/delivery_design.dart';
 import 'package:glowing_avtar/heart_avtar_page.dart';
 import 'avatarglow.dart';
 class MyHomePage extends StatefulWidget {
@@ -47,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const ()),
+                      builder: (context) => const DeliveryDesign()),
                 );
               },
               child: const Text('Go to Heart Avatar'),
