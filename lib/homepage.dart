@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       builder: (context) => const DeliveryDesign()),
                 );
               },
-              child: const Text('Go to Heart Avatar'),
+              child: const Text('Go to Delivery design'),
             ),
           ],
         ),
