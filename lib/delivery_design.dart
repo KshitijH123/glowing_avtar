@@ -25,22 +25,22 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               ),
               child: SizedBox(
                 width: 300,
-                height: 150,
+                height: 200,
                 child: Row(
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.network(
                             'https://media.istockphoto.com/id/852439862/photo/three-dimensional-modern-white-car.jpg?s=612x612&w=0&k=20&c=aBFCM8v0ZnNfxK1CpAN0WnQm2UWGuJkPNoO1wWzlRdI=',
                             width: 60,
-                            height: 60,
+                            height: 20,
                             fit: BoxFit.cover,
                           ),
-                          const SizedBox(
-                              height: 8), 
+                          const SizedBox(height: 8),
                           const Text(
                             'Sedan',
                             style: TextStyle(
@@ -48,12 +48,29 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                               fontSize: 18,
                             ),
                           ),
+                          const Text(
+                            'Food',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                            ),
+                          ),
+                          const Text(
+                            'Date: 10/10/2023',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                            ),
+                          ),
+                          const Text(
+                            'Pickup Time: 09.00 AM to 09:30',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                            ),
+                          ),
                         ],
                       ),
-                    ),
-                    const Expanded(
-                      child:
-                          SizedBox(), 
                     ),
                   ],
                 ),
