@@ -25,7 +25,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               ),
               child: SizedBox(
                 width: 300,
-                height: 200,
+                height: 150,
                 child: Row(
                   children: [
                     Padding(
@@ -37,7 +37,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           Image.network(
                             'https://media.istockphoto.com/id/852439862/photo/three-dimensional-modern-white-car.jpg?s=612x612&w=0&k=20&c=aBFCM8v0ZnNfxK1CpAN0WnQm2UWGuJkPNoO1wWzlRdI=',
                             width: 60,
-                            height: 20,
+                            height: 30,
                             fit: BoxFit.cover,
                           ),
                           const SizedBox(height: 8),
@@ -74,6 +74,18 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                     ),
                   ],
                 ),
+              ),
+            ),
+            
+          ),
+           const SizedBox(height: 16), 
+          const Padding(
+            padding: EdgeInsets.only(right: 140),
+            child: Text(
+              'Pickup & Drop Location',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
