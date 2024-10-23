@@ -18,7 +18,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
         children: [
           Center(
             child: Card(
-              color: Color.fromARGB(255, 131, 152, 255),
+              color:const Color.fromARGB(255, 131, 152, 255),
               elevation: 8,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -27,7 +27,6 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 width: 300,
                 height: 150,
                 child: Stack(
-                  // Wrapped with Stack
                   children: [
                     Row(
                       children: [
