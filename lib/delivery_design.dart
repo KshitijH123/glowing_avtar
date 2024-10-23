@@ -78,7 +78,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                       ],
                     ),
                     const Positioned(
-                      bottom: 8,
+                      bottom: 14,
                       right: 8,
                       child: Icon(
                         Icons.note_alt,
