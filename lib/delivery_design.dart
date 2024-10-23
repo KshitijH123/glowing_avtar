@@ -18,7 +18,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
         children: [
           Center(
             child: Card(
-              color: Colors.purple[100],
+              color: Color.fromARGB(255, 131, 152, 255),
               elevation: 8,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -26,50 +26,64 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               child: SizedBox(
                 width: 300,
                 height: 150,
-                child: Row(
+                child: Stack(
+                  // Wrapped with Stack
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            'assets/images/seadan.png',
-                            width: 60,
-                            height: 30,
-                            fit: BoxFit.cover,
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                'assets/images/seadan.png',
+                                width: 60,
+                                height: 30,
+                                fit: BoxFit.cover,
+                              ),
+                              const SizedBox(height: 8),
+                              const Text(
+                                'Sedan',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              const Text(
+                                'Food',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                ),
+                              ),
+                              const Text(
+                                'Date: 10/10/2023',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                ),
+                              ),
+                              const Text(
+                                'Pickup Time: 09.00 AM to 09:30',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
                           ),
-                          const SizedBox(height: 8),
-                          const Text(
-                            'Sedan',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                            ),
-                          ),
-                          const Text(
-                            'Food',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                            ),
-                          ),
-                          const Text(
-                            'Date: 10/10/2023',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                            ),
-                          ),
-                          const Text(
-                            'Pickup Time: 09.00 AM to 09:30',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                            ),
-                          ),
-                        ],
+                        ),
+                      ],
+                    ),
+                    const Positioned(
+                      bottom: 8,
+                      right: 8,
+                      child: Icon(
+                        Icons.note_alt,
+                        color: Colors.white,
+                        size: 24,
                       ),
                     ),
                   ],
