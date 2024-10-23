@@ -34,8 +34,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Image.network(
-                            'https://media.istockphoto.com/id/852439862/photo/three-dimensional-modern-white-car.jpg?s=612x612&w=0&k=20&c=aBFCM8v0ZnNfxK1CpAN0WnQm2UWGuJkPNoO1wWzlRdI=',
+                          Image.asset(
+                            'assets/images/seadan.png',
                             width: 60,
                             height: 30,
                             fit: BoxFit.cover,
@@ -76,11 +76,10 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
               ),
             ),
-            
           ),
-           const SizedBox(height: 16), 
+          const SizedBox(height: 16),
           const Padding(
-            padding: EdgeInsets.only(right: 140),
+            padding: EdgeInsets.only(right: 150),
             child: Text(
               'Pickup & Drop Location',
               style: TextStyle(
