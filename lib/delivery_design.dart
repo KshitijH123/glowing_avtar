@@ -117,19 +117,31 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                   children: [
                     Padding(
                       padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        'Pickup Location',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.my_location_rounded,
+                            color: Color.fromARGB(255, 131, 152, 255),
+                            size: 24,
+                          ),
+                          SizedBox(
+                              width: 8), 
+                          Text(
+                            'Pickup Location',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Icon(
                         Icons.note_alt,
-                        color: const Color.fromARGB(255, 131, 152, 255),                        size: 24,
+                        color: Color.fromARGB(255, 131, 152, 255),
+                        size: 24,
                       ),
                     ),
                   ],
