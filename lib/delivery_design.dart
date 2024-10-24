@@ -18,7 +18,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
         children: [
           Center(
             child: Card(
-              color:const Color.fromARGB(255, 131, 152, 255),
+              color: const Color.fromARGB(255, 131, 152, 255),
               elevation: 8,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -98,6 +98,43 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+          Center(
+            child: Card(
+              color: Colors.white,
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: SizedBox(
+                width: 300,
+                height: 70,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: const Text(
+                        'Pickup Location',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.note_alt,
+                        color: Colors.black,
+                        size: 24,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
