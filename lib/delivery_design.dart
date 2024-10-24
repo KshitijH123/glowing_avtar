@@ -109,15 +109,15 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: SizedBox(
+              child: const SizedBox(
                 width: 300,
                 height: 70,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: const Text(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
                         'Pickup Location',
                         style: TextStyle(
                           fontSize: 16,
@@ -125,12 +125,11 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                         ),
                       ),
                     ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Icon(
                         Icons.note_alt,
-                        color: Colors.black,
-                        size: 24,
+                        color: const Color.fromARGB(255, 131, 152, 255),                        size: 24,
                       ),
                     ),
                   ],
