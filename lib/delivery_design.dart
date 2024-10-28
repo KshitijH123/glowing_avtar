@@ -19,7 +19,6 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
 
   void _addDropLocation() {
     if (locations.length < 3) {
-      // Allow up to 2 drop locations
       setState(() {
         locations.add({
           'type': 'Drop Location',
@@ -35,6 +34,12 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
     }
   }
 
+  void _removeLocation(int index) {
+    setState(() {
+      locations.removeAt(index);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +47,6 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
         title: const Text('Check Out'),
       ),
       body: SingleChildScrollView(
-        // Make the page scrollable
         child: Column(
           children: [
             Center(
@@ -140,13 +144,11 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
                 child: SizedBox(
                   width: 300,
-                  height: 120,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Stack(
+                    child: Column(
                       children: [
                         const Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
@@ -177,29 +179,97 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                               ],
                             ),
                             SizedBox(height: 8),
-                            Text(
-                              'No: 12345',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 4),
-                            Text(
-                              'Destination: Main Street',
-                              style: TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                            SizedBox(height: 4),
-                            Text(
-                              'Time Left: 15 mins',
-                              style: TextStyle(
-                                fontSize: 14,
+                            Center(
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'No: 12345',
+                                    style:  TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    'Destination: Main Street',
+                                    style: const TextStyle(
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    'Time Left: 15 mins',
+                                    style: const TextStyle(
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ],
                         ),
+                        const SizedBox(height: 16),
+                        for (int i = 1; i < locations.length; i++)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                const Icon(
+                                  Icons.location_on,
+                                  color: Color.fromARGB(255, 131, 152, 255),
+                                  size: 24,
+                                ),
+                                const SizedBox(width: 8),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      locations[i]['type']!,
+                                      style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 4),
+                                    Center(
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            locations[i]['number']!,
+                                            style: const TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 4),
+                                          Text(
+                                            locations[i]['destination']!,
+                                            style: const TextStyle(
+                                              fontSize: 14,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 4),
+                                          Text(
+                                            locations[i]['timeLeft']!,
+                                            style: const TextStyle(
+                                              fontSize: 14,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const Spacer(), 
+                                IconButton(
+                                  icon: const Icon(Icons.delete,
+                                      color: Colors.red),
+                                  onPressed: () => _removeLocation(i),
+                                ),
+                              ],
+                            ),
+                          ),
                         Positioned(
                           bottom: 10,
                           right: 10,
@@ -207,8 +277,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                             width: 25,
                             height: 25,
                             child: FloatingActionButton(
-                              onPressed:
-                                  _addDropLocation, // Call function to add drop location
+                              onPressed: _addDropLocation,
                               backgroundColor: Colors.white,
                               child: const Icon(Icons.add, size: 20),
                             ),
@@ -220,81 +289,6 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
               ),
             ),
-            const SizedBox(height: 16),
-            for (var location in locations.skip(1))
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0),
-                child: Center(
-                  child: Card(
-                    color: Colors.white,
-                    elevation: 4,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: SizedBox(
-                      width: 300,
-                      height: 120,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.my_location_rounded,
-                                      color: Color.fromARGB(255, 131, 152, 255),
-                                      size: 24,
-                                    ),
-                                    const SizedBox(width: 8),
-                                    Text(
-                                      location['type']!,
-                                      style: const TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                const Icon(
-                                  Icons.note_alt,
-                                  color: Color.fromARGB(255, 131, 152, 255),
-                                  size: 24,
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              location['number']!,
-                              style: const TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              location['destination']!,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              location['timeLeft']!,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
           ],
         ),
       ),
