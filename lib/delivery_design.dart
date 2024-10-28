@@ -109,42 +109,93 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: const SizedBox(
+              child: SizedBox(
                 width: 300,
-                height: 70,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Row(
+                height: 120, 
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Stack(
+                    children: [
+                      const Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Icon(
-                            Icons.my_location_rounded,
-                            color: Color.fromARGB(255, 131, 152, 255),
-                            size: 24,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.my_location_rounded,
+                                    color: Color.fromARGB(255, 131, 152, 255),
+                                    size: 24,
+                                  ),
+                                  SizedBox(width: 8),
+                                  Text(
+                                    'Pickup Location',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Icon(
+                                Icons.note_alt,
+                                color: Color.fromARGB(255, 131, 152, 255),
+                                size: 24,
+                              ),
+                            ],
                           ),
-                          SizedBox(
-                              width: 8), 
-                          Text(
-                            'Pickup Location',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          SizedBox(height: 8),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'No: 12345',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                'Destination: Main Street',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                ),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                'Time Left: 15 mins',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.note_alt,
-                        color: Color.fromARGB(255, 131, 152, 255),
-                        size: 24,
+                    Positioned(
+                        bottom: 10, 
+                        right: 10,
+                        child: SizedBox(
+                          width: 25, 
+                          height: 25, 
+                          child: FloatingActionButton(
+                            onPressed: () {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                    content: Text('Button Pressed!')),
+                              );
+                            },
+                            backgroundColor: Colors.white,
+                            child: const Icon(Icons.add,
+                                size: 20), 
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
