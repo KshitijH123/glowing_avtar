@@ -34,6 +34,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
     }
   }
     final TextEditingController _noteController = TextEditingController();
+        final TextEditingController _promoCodeController = TextEditingController();
+
 
 
   void _removeLocation(int index) {
@@ -313,6 +315,35 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 maxLines: 5,
                 decoration: InputDecoration(
                   hintText: 'Type your note here...',
+                  border: UnderlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+              ),
+              
+            ),
+            
+            
+         const SizedBox(height: 16),
+            const Padding(
+              padding: EdgeInsets.only(right: 200),
+              child: Text(
+                'Promo Code',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              width: 350,
+              height: 50, 
+              child: TextField(
+                controller: _promoCodeController,
+                decoration: InputDecoration(
+                  hintText: 'Enter promo code...',
                   border: UnderlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
