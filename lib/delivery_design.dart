@@ -288,6 +288,18 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                   ),
                 ),
               ),
+              
+            ),
+             const SizedBox(height: 16),
+            const Padding(
+              padding: EdgeInsets.only(right: 200),
+              child: Text(
+                'Note {Optional}',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         ),
