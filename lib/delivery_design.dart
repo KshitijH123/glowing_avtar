@@ -361,6 +361,12 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
               ),
             ),
+            const SizedBox(height: 16),
+          Container(
+            width: 250,
+            height: 300,
+            color: Colors.grey,
+          )  
           ],
         ),
       ),
