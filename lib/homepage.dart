@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       builder: (context) => const ExampleStaggeredAnimations ()),
                 );
               },
-              child: const Text('Go to Animation'),
+              child: const Text('Go to Animation page'),
             ),
           ],
         ),
