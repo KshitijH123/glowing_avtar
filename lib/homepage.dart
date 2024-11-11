@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glowing_avtar/animation.dart';
 import 'package:glowing_avtar/delivery_design.dart';
 import 'package:glowing_avtar/heart_avtar_page.dart';
 import 'avatarglow.dart';
@@ -52,6 +53,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: const Text('Go to Delivery design'),
+            ),
+              ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ExampleStaggeredAnimations ()),
+                );
+              },
+              child: const Text('Go to Animation'),
             ),
           ],
         ),
