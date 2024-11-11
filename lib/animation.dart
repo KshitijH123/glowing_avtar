@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glowing_avtar/delivery_design.dart';
 
 
 
@@ -290,7 +291,13 @@ class _MenuState extends State<Menu> with SingleTickerProviderStateMixin {
               backgroundColor: Colors.blue,
               padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 14),
             ),
-            onPressed: () {},
+            onPressed: () {
+               Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const DeliveryDesign()),
+              );
+            },
             child: const Text(
               'Get started',
               style: TextStyle(
