@@ -33,10 +33,9 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
       );
     }
   }
-    final TextEditingController _noteController = TextEditingController();
-        final TextEditingController _promoCodeController = TextEditingController();
 
-
+  final TextEditingController _noteController = TextEditingController();
+  final TextEditingController _promoCodeController = TextEditingController();
 
   void _removeLocation(int index) {
     setState(() {
@@ -188,7 +187,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                                 children: [
                                   Text(
                                     'No: 12345',
-                                    style:  TextStyle(
+                                    style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -265,9 +264,10 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                                     ),
                                   ],
                                 ),
-                                const Spacer(), 
+                                const Spacer(),
                                 IconButton(
-                                  icon: const Icon(Icons.delete_forever_outlined,
+                                  icon: const Icon(
+                                      Icons.delete_forever_outlined,
                                       color: Colors.blue),
                                   onPressed: () => _removeLocation(i),
                                 ),
@@ -292,9 +292,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                   ),
                 ),
               ),
-              
             ),
-             const SizedBox(height: 16),
+            const SizedBox(height: 16),
             const Padding(
               padding: EdgeInsets.only(right: 200),
               child: Text(
@@ -305,11 +304,11 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
               ),
             ),
-        const SizedBox(height: 8),
+            const SizedBox(height: 8),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               width: 350,
-              height: 100, 
+              height: 100,
               child: TextField(
                 controller: _noteController,
                 maxLines: 5,
@@ -320,11 +319,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                   ),
                 ),
               ),
-              
             ),
-            
-            
-         const SizedBox(height: 16),
+            const SizedBox(height: 16),
             const Padding(
               padding: EdgeInsets.only(right: 200),
               child: Text(
@@ -339,7 +335,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               width: 350,
-              height: 50, 
+              height: 50,
               child: TextField(
                 controller: _promoCodeController,
                 decoration: InputDecoration(
@@ -350,7 +346,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
               ),
             ),
-             const SizedBox(height: 16),
+            const SizedBox(height: 16),
             const Padding(
               padding: EdgeInsets.only(right: 200),
               child: Text(
@@ -362,13 +358,53 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               ),
             ),
             const SizedBox(height: 16),
-          Container(
-            width: 250,
-            height: 300,
-            color: Colors.grey,
-          )  
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: SizedBox(
+                width: 350,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      paymentMethodRow('INFT', Icons.payment),
+                      paymentMethodRow('Visa', Icons.credit_card),
+                      paymentMethodRow('Mastercard', Icons.credit_card),
+                      paymentMethodRow('Cash', Icons.money),
+                      paymentMethodRow('Apple Pay', Icons.apple),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            
           ],
         ),
+      ),
+    );
+  }
+
+  Widget paymentMethodRow(String methodName, IconData icon) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            methodName,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Icon(
+            icon,
+            color: Color.fromARGB(255, 131, 152, 255),
+            size: 24,
+          ),
+        ],
       ),
     );
   }
