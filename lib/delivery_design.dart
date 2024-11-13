@@ -393,19 +393,19 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
               ),
             ),
-           const SizedBox(height: 16),
+          const SizedBox(height: 16),
             Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: const SizedBox(
+              child: SizedBox(
                 width: 330,
                 child: Padding(
-                  padding: EdgeInsets.only(right: 2, left: 2),
+                  padding: const EdgeInsets.only(right: 2, left: 2),
                   child: Column(
                     children: [
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(
                             vertical: 8.0, horizontal: 16),
                         child: Row(
@@ -428,7 +428,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           ],
                         ),
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(
                             vertical: 8.0, horizontal: 16),
                         child: Row(
@@ -442,7 +442,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                               ),
                             ),
                             Text(
-                              '\$10.00', 
+                              '\$10.00', // Example value, replace with actual value
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -451,7 +451,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           ],
                         ),
                       ),
-                      Padding(
+                      // Discount Row
+                      const Padding(
                         padding: EdgeInsets.symmetric(
                             vertical: 8.0, horizontal: 16),
                         child: Row(
@@ -474,7 +475,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           ],
                         ),
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(
                             vertical: 8.0, horizontal: 16),
                         child: Row(
@@ -488,7 +489,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                               ),
                             ),
                             Text(
-                              '\$55.00',
+                              '\$55.00', 
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -497,11 +498,36 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           ],
                         ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: ElevatedButton(
+                          onPressed: () {
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(255, 131, 152, 255), 
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            padding: const EdgeInsets.symmetric(vertical: 14),
+                            minimumSize: const Size(
+                                double.infinity, 50), 
+                          ),
+                          child: const Text(
+                            'Next',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ),
             ),
+
           ],
         ),
       ),
