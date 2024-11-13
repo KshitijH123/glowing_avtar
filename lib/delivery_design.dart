@@ -17,6 +17,9 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
     },
   ];
 
+  String?
+      _selectedPaymentMethod; 
+
   void _addDropLocation() {
     if (locations.length < 3) {
       setState(() {
@@ -192,17 +195,17 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  const SizedBox(height: 4),
+                                  SizedBox(height: 4),
                                   Text(
                                     'Destination: Main Street',
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 14,
                                     ),
                                   ),
-                                  const SizedBox(height: 4),
+                                  SizedBox(height: 4),
                                   Text(
                                     'Time Left: 15 mins',
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 14,
                                     ),
                                   ),
@@ -366,7 +369,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               child: SizedBox(
                 width: 330,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(right: 2,left: 2),
                   child: Column(
                     children: [
                       paymentMethodRow('INFT', Icons.payment),
@@ -379,9 +382,9 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
               ),
             ),
-             const SizedBox(height: 16),
+            const SizedBox(height: 16),
             const Padding(
-              padding: EdgeInsets.only(right: 200),
+              padding: EdgeInsets.only(right: 100),
               child: Text(
                 'Payment Details',
                 style: TextStyle(
@@ -390,6 +393,24 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
               ),
             ),
+            const SizedBox(height: 16),
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+               child: SizedBox(
+                width: 330,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 2, left: 2),
+                  child: Column(
+                    children: [
+                      
+                    ],
+                  ),
+                ),
+              ),
+              ),
           ],
         ),
       ),
@@ -397,9 +418,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
   }
 
   Widget paymentMethodRow(String methodName, IconData icon) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Row(
+    return RadioListTile<String>(
+      title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
@@ -411,11 +431,18 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
           ),
           Icon(
             icon,
-            color: Color.fromARGB(255, 131, 152, 255),
+            color:const Color.fromARGB(255, 131, 152, 255),
             size: 24,
           ),
         ],
       ),
+      value: methodName,
+      groupValue: _selectedPaymentMethod,
+      onChanged: (String? value) {
+        setState(() {
+          _selectedPaymentMethod = value;
+        });
+      },
     );
   }
 }
