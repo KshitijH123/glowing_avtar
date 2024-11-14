@@ -442,7 +442,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                               ),
                             ),
                             Text(
-                              '\$10.00', // Example value, replace with actual value
+                              '\$10.00',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -451,7 +451,6 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           ],
                         ),
                       ),
-                      // Discount Row
                       const Padding(
                         padding: EdgeInsets.symmetric(
                             vertical: 8.0, horizontal: 16),
@@ -548,7 +547,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
           ),
           Icon(
             icon,
-            color:const Color.fromARGB(255, 131, 152, 255),
+            color:Color.fromARGB(255, 67, 91, 212),
             size: 24,
           ),
         ],
