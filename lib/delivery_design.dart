@@ -144,7 +144,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
             Center(
               child: Card(
                 color: Colors.white,
-                elevation: 4,
+                elevation: 4, 
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),

@@ -101,7 +101,6 @@ class _ExampleStaggeredAnimationsState extends State<ExampleStaggeredAnimations>
   }
 
   Widget _buildContent() {
-    // Put page content here.
     return const SizedBox();
   }
 
