@@ -276,19 +276,18 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                               ],
                             ),
                           ),
-                        Positioned(
-                          bottom: 10,
-                          right: 10,
+                         Align(
+                          alignment: Alignment.bottomRight, 
                           child: SizedBox(
-                            width: 25,
-                            height: 25,
+                            width: 30,
+                            height: 30,
                             child: FloatingActionButton(
                               onPressed: _addDropLocation,
                               backgroundColor: Colors.white,
                               child: const Icon(Icons.add, size: 20),
                             ),
                           ),
-                        ),
+                        )
                       ],
                     ),
                   ),
@@ -398,13 +397,13 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: SizedBox(
+              child: const SizedBox(
                 width: 330,
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 2, left: 2),
+                  padding: EdgeInsets.only(right: 2, left: 2),
                   child: Column(
                     children: [
-                      const Padding(
+                      Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
                         child: Row(
@@ -427,7 +426,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           ],
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
                         child: Row(
@@ -450,7 +449,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           ],
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
                         child: Row(
@@ -473,7 +472,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           ],
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
                         child: Row(
