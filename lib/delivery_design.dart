@@ -17,8 +17,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
     },
   ];
 
-  String?
-      _selectedPaymentMethod; 
+  String? _selectedPaymentMethod;
 
   void _addDropLocation() {
     if (locations.length < 3) {
@@ -144,7 +143,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
             Center(
               child: Card(
                 color: Colors.white,
-                elevation: 4, 
+                elevation: 4,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -369,7 +368,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               child: SizedBox(
                 width: 330,
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 2,left: 2),
+                  padding: const EdgeInsets.only(right: 2, left: 2),
                   child: Column(
                     children: [
                       paymentMethodRow('INFT', Icons.payment),
@@ -393,7 +392,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                 ),
               ),
             ),
-          const SizedBox(height: 16),
+            const SizedBox(height: 16),
             Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
@@ -406,8 +405,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                   child: Column(
                     children: [
                       const Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 8.0, horizontal: 16),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -419,7 +418,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                               ),
                             ),
                             Text(
-                              '\$50.00', 
+                              '\$50.00',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -429,8 +428,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 8.0, horizontal: 16),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -452,8 +451,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 8.0, horizontal: 16),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -465,7 +464,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                               ),
                             ),
                             Text(
-                              '\$5.00', 
+                              '\$5.00',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -475,8 +474,8 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 8.0, horizontal: 16),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -484,11 +483,11 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                               'Total',
                               style: TextStyle(
                                 fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
-                              '\$55.00', 
+                              '\$55.00',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -497,36 +496,33 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: ElevatedButton(
-                          onPressed: () {
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 131, 152, 255), 
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            padding: const EdgeInsets.symmetric(vertical: 14),
-                            minimumSize: const Size(
-                                double.infinity, 50), 
-                          ),
-                          child: const Text(
-                            'Next',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ),
               ),
             ),
-
+              Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 131, 152, 255),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  minimumSize: const Size(double.infinity, 50),
+                ),
+                child: const Text(
+                  'Next',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -544,10 +540,10 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
-          ),
+          ), //;
           Icon(
             icon,
-            color:Color.fromARGB(255, 67, 91, 212),
+            color: const Color.fromARGB(255, 67, 91, 212),
             size: 24,
           ),
         ],
