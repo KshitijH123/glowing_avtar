@@ -269,7 +269,7 @@ class _DeliveryDesignState extends State<DeliveryDesign> {
                                 const Spacer(),
                                 IconButton(
                                   icon: const Icon(
-                                      Icons.delete_forever_outlined,
+                                      Icons.delete_outline_outlined,
                                       color: Colors.blue),
                                   onPressed: () => _removeLocation(i),
                                 ),
