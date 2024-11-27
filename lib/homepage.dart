@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:glowing_avtar/animation.dart';
 import 'package:glowing_avtar/delivery_design.dart';
 import 'package:glowing_avtar/heart_avtar_page.dart';
+import 'package:glowing_avtar/login_page.dart';
 import 'avatarglow.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -63,6 +64,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: const Text('Go to Animation page'),
+            ),
+             ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const LoginPage()),
+                );
+              },
+              child: const Text('Go to Login page'),
             ),
           ],
         ),
