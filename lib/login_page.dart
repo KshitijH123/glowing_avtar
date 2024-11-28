@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 30),
                     TextFormField(
                       controller: _fullNameController,
                       decoration: const InputDecoration(
@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                         return null;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 30),
                     TextFormField(
                       controller: _emailController,
                       decoration: const InputDecoration(
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                         return null;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 30),
                     TextFormField(
                       controller: _passwordController,
                       decoration: const InputDecoration(
@@ -95,11 +95,17 @@ class _LoginPageState extends State<LoginPage> {
                         return null;
                       },
                     ),
-                    const SizedBox(height: 20),
-                    ElevatedButton(
-                      onPressed: _submitForm,
-                      child: const Text('Login'),
+                    const SizedBox(height: 30),
+                    SizedBox(
+                      width: double
+                          .infinity,
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: _submitForm,
+                        child: const Text('Login'),
+                      ),
                     ),
+
                   ],
                 ),
               ),

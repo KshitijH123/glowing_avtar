@@ -29,7 +29,7 @@ class _OtpPageState extends State<OtpPage> {
               ),
               const SizedBox(height: 20),
               Pinput(
-                length: 4, // OTP is 4 digits
+                length: 4,
                 controller: _otpController,
                 defaultPinTheme: PinTheme(
                   width: 56,
@@ -46,7 +46,6 @@ class _OtpPageState extends State<OtpPage> {
                   ),
                 ),
                 onCompleted: (otp) {
-                  // Handle OTP completion (e.g., verify OTP)
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text('OTP Entered: $otp')),
                   );
@@ -55,7 +54,6 @@ class _OtpPageState extends State<OtpPage> {
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // Logic to verify OTP or navigate further
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('OTP Verified')),
                   );
