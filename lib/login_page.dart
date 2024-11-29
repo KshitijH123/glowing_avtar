@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: _submitForm,
-                        child: const Text('Login'),
+                        child: const Text('Login',style: TextStyle(color: Colors.black87,fontWeight: FontWeight.w900),),
                       ),
                     ),
 
