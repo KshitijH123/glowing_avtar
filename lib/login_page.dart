@@ -97,8 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 30),
                     SizedBox(
-                      width: double
-                          .infinity,
+                      width: double.infinity,
                       height: 50,
                       child: ElevatedButton(
                         onPressed: _submitForm,

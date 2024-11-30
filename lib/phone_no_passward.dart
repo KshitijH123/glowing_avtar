@@ -7,10 +7,13 @@ class PhoneNoPassword extends StatefulWidget {
 
   @override
   _PhoneNoPasswordState createState() => _PhoneNoPasswordState();
+  
+  
 }
 
 class _PhoneNoPasswordState extends State<PhoneNoPassword> {
   final _phoneController = TextEditingController();
+  final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
@@ -58,6 +61,24 @@ class _PhoneNoPasswordState extends State<PhoneNoPassword> {
                           return 'Please enter your phone number';
                         } else if (value.length != 10) {
                           return 'Phone number must be 10 digits';
+                        }
+                        return null;
+                      },
+                    ),
+                      const SizedBox(height: 30),
+                    TextFormField(
+                      controller: _emailController,
+                      decoration: const InputDecoration(
+                        labelText: 'Gmail',
+                        border: OutlineInputBorder(),
+                      ),
+                      keyboardType: TextInputType.emailAddress,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your email';
+                        } else if (!RegExp(r'^[a-zA-Z0-9._%+-]+@gmail\.com$')
+                            .hasMatch(value)) {
+                          return 'Please enter a valid Gmail address';
                         }
                         return null;
                       },
