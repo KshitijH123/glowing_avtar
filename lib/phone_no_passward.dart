@@ -106,7 +106,7 @@ class _PhoneNoPasswordState extends State<PhoneNoPassword> {
                       height: 50, 
                       child: ElevatedButton(
                         onPressed: _submitForm,
-                        child: const Text('Login',style: TextStyle(fontSize: Checkbox.width),),
+                        child: const Text('Login',style: TextStyle(fontSize: Checkbox.width,color: Color.fromARGB(255, 6, 63, 109)),),
                       ),
                     ),
                   ],
