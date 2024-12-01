@@ -51,7 +51,6 @@ class _LoginPageState extends State<LoginPage> {
                       controller: _fullNameController,
                       decoration: const InputDecoration(
                         labelText: 'Full Name',
-                        border: OutlineInputBorder(),
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -101,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: _submitForm,
-                        child: const Text('Login',style: TextStyle(fontSize: Checkbox.width),),
+                        child: const Text('Login',style: TextStyle(fontSize: Checkbox.width,color: Color.fromARGB(255, 5, 69, 122)),),
                       ),
                     ),
 
